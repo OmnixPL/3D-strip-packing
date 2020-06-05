@@ -159,7 +159,7 @@ def display_results(level_results, measure_levels, simple_results, measure_simpl
 
 
 def main():
-    print("For more information: README.md")
+    print("For more information read documentation")
     print("For options: config.txt")
 
     # variables from config file
