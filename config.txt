@@ -1,11 +1,14 @@
 x_of_outer=300
 y_of_outer=300
 
-min_percent=30
+min_percent=0
 max_percent=100
 
-box_no=10
+use_generator=yes
 
 measure_levels=yes
 measure_simple=yes
-measure_list=yes
+measure_list=no
+
+sample_sizes=default
+tries=10

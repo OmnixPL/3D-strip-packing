@@ -12,10 +12,6 @@ def levels_algorithm(outer_box, inner_boxes):
         inner_boxes[i] = Box(x, y, z)
     inner_sorted = sorted(inner_boxes, key=lambda x: x.z, reverse=True)  # sort boxes by max height
 
-    # TODO debug
-    for box in inner_sorted:
-        print(box.x, box.y, box.z)
-
     if outer_box.x < outer_box.y:   # from now on we assume x >= y
         outer_box.x, outer_box.y = outer_box.y, outer_box.x
 
