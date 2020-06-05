@@ -1,3 +1,6 @@
+"""Kacper Kula - projekt AAL
+Pakowanie pudełek do pojemnika o ograniczonych dwóch wymiarach, minimalizacja trzeciego"""
+
 from box import Box
 
 
