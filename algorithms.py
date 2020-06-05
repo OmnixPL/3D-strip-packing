@@ -6,9 +6,9 @@ from box import Box
 
 def levels_algorithm(outer_box, inner_boxes):
     for i in range(len(inner_boxes)):   # rotate boxes
-        z = max(inner_boxes[i].x, inner_boxes[i].y, inner_boxes[i].z)        # z in box is always longest
-        x = min(inner_boxes[i].x, inner_boxes[i].y, inner_boxes[i].z)        # x in box is always shortest
-        y = (inner_boxes[i].x + inner_boxes[i].y + inner_boxes[i].z) - z - x # y is always middle
+        z = max(inner_boxes[i].x, inner_boxes[i].y, inner_boxes[i].z)           # z in box is always longest
+        x = min(inner_boxes[i].x, inner_boxes[i].y, inner_boxes[i].z)           # x in box is always shortest
+        y = (inner_boxes[i].x + inner_boxes[i].y + inner_boxes[i].z) - z - x    # y is always middle
         inner_boxes[i] = Box(x, y, z)
     inner_sorted = sorted(inner_boxes, key=lambda x: x.z, reverse=True)  # sort boxes by max height
 
@@ -42,7 +42,8 @@ def levels_algorithm(outer_box, inner_boxes):
 
         inner_sorted = remaining
 
-    return heightZ;
+    print('Levels: boxes: ' + str(len(inner_boxes)) + " height: " + str(heightZ))
+    return heightZ
 
 
 def simple_algorithm(outer_box, inner_boxes):
@@ -50,8 +51,9 @@ def simple_algorithm(outer_box, inner_boxes):
     for box in inner_boxes:
         height = min(box.x, box.y, box.z)
         total_height += height      # one box per level so two other dimensions are ignorable
-    return total_height;
+    print('Simple: boxes: ' + str(len(inner_boxes)) + " height: " + str(total_height))
+    return total_height
 
 
 def list_algorithm(outer_box, inner_boxes):
-    return 3;
+    return 3

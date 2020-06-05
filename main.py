@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Kacper Kula - projekt AAL
 Pakowanie pudełek do pojemnika o ograniczonych dwóch wymiarach, minimalizacja trzeciego"""
-from math import sqrt
+
 from random import randrange
 
 from algorithms import *

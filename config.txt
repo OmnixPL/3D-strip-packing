@@ -1,7 +1,7 @@
 x_of_outer=300
 y_of_outer=300
 
-min_percent=0
+min_percent=40
 max_percent=100
 
 use_generator=yes
@@ -10,5 +10,5 @@ measure_levels=yes
 measure_simple=yes
 measure_list=no
 
-sample_sizes=default
-tries=10
+sample_sizes=5000,10000,15000,20000
+tries=1
