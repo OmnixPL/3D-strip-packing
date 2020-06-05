@@ -1,4 +1,6 @@
 .idea
 venv/
+__pycache__/
 stare do sugerowania sie.py
 configsugerowany.txt
+TODO

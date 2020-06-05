@@ -2,6 +2,8 @@
 """Kacper Kula - projekt AAL
 Pakowanie pudełek do pojemnika o ograniczonych dwóch wymiarach, minimalizacja trzeciego"""
 
+from algorithms import *
+from box import Box
 import timeit
 
 
@@ -61,3 +63,30 @@ def load_config():
         print("Could not load config file.")
     return x_of_outer, y_of_outer, min_percent, max_percent, box_no, measure_levels, measure_simple, measure_list
 
+
+def main():
+    print("For more information: README.md")
+    print("For options: config.txt")
+
+    outer_box = Box(30, 30, 0)
+    inner_boxes = [Box(10, 20, 30), Box(9, 18, 27), Box(8, 24, 16), Box(1, 2, 3), Box(25, 1, 1), Box(20, 20, 20)]
+    levels_algorithm(outer_box, inner_boxes)
+
+    # variables from config file
+    x_of_outer, y_of_outer, min_percent, max_percent, box_no, measure_levels, measure_simple, measure_list = load_config()
+
+    # from old main:
+    # will keep time measurements for different sizes
+    # add_results = []
+    # remove_results = []
+    # enumerate_results = []
+
+    # measurements(add_results, add, remove_results, remove, enumerate_results, enum, sizes, words, tries, k, n)
+
+    # display_results(add_results, add, remove_results, remove, enumerate_results, enum, sizes)
+
+    return
+
+
+if __name__ == "__main__":
+    main()
